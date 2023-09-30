@@ -1,0 +1,6 @@
+.nameTitle {
+  -webkit-text-stroke: 2px yellow;
+  text-stroke: 2px yellow;
+  -webkit-text-fill-color: transparent;
+  fill: transparent;
+}

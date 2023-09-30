@@ -1,7 +1,9 @@
+import Home from "./components/home/home";
+
 function App() {
   return (
     <div className="w-full p-0 m-0">
-      <h1>Hello Pizza Joints</h1>
+      <Home />
     </div>
   );
 }
