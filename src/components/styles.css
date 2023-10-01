@@ -4,3 +4,36 @@
   -webkit-text-fill-color: transparent;
   fill: transparent;
 }
+.phoneRef {
+  max-width: 400px;
+}
+.prepareBox {
+  position: relative;
+}
+
+.btnPrepare {
+  position: absolute;
+  left: 30%;
+  right: -50%;
+  transform: translateX(-50%, -50%);
+  z-index: 20;
+  max-width: fit-content;
+  margin-top: 100px;
+}
+
+/* media queries */
+
+@media screen and (max-width: 500px) {
+  .phoneRef {
+    max-width: 300px;
+  }
+  .display-none-one-426 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .phoneRef {
+    max-width: 250px;
+  }
+}
