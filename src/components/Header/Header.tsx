@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 function Header() {
   return (
-    <div className="w-full headerBox flex items-center justify-between p-5 m-0 bg-black">
+    <div className="w-full headerBox flex items-center justify-between p-5 m-0 pt-10">
       <Lottie animationData={logo} className="logo" />
       <div className="links flex gap-10 items-center">
         <motion.a href="https://maps.app.goo.gl/2H7HscDamcbKtQ426">
