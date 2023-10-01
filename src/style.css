@@ -61,12 +61,14 @@ body {
   margin: 0 auto;
   padding: 50px;
   text-align: center;
+  padding-top: 20px;
 }
 
 /* media queries */
 @media screen and (max-width: 780px) {
   #app {
     padding: 20px;
+    padding-top: 10px;
   }
   body {
     overflow-y: auto;

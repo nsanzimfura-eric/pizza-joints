@@ -4,10 +4,13 @@ import { motion, AnimatePresence } from "framer-motion";
 import { leftData, rightData } from "./dataDescription";
 import Lottie, { LottieRefCurrentProps } from "lottie-react";
 import phoneAnim from "../../assets/lotties/phoneAnim.json";
+import { routes } from "../utils/routes";
+import { useNavigate } from "react-router-dom";
 
 function Home() {
   const phoneRef = useRef<LottieRefCurrentProps>(null);
   const [isPhoneAnimating, setIsPhoneAnimating] = useState(true);
+  const navigate = useNavigate();
 
   return (
     <div className="flex flex-col justify-start pt-5 items-center h-screen">
@@ -101,6 +104,7 @@ function Home() {
             initial={{ y: "100vh" }}
             animate={{ y: 0 }}
             transition={{ duration: 2 }}
+            onClick={() => navigate(routes.chooseType)}
           >
             Prepare your Order
           </motion.button>
