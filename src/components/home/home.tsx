@@ -1,13 +1,7 @@
 import "../styles.css";
 import { useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import {
-  leftData,
-  rightData,
-  menuVars,
-  containerVars,
-  titleAnim,
-} from "./dataDescription";
+import { leftData, rightData } from "./dataDescription";
 import Lottie, { LottieRefCurrentProps } from "lottie-react";
 import phoneAnim from "../../assets/lotties/phoneAnim.json";
 
@@ -33,10 +27,7 @@ function Home() {
           At your service, we deliver
         </motion.p>
       )}
-      <motion.div
-        variants={menuVars}
-        className="showUpBoxes w-full flex items-center justify-center md:gap-20 lg:flex-row mt-5"
-      >
+      <div className="showUpBoxes w-full flex items-center justify-center md:gap-20 lg:flex-row mt-5">
         <AnimatePresence>
           <motion.div
             className="flex flex-col animate-single-box gap-3 justify-start items-start p-5  border-yellow-400 border bg-transparent rounded-lg md:rounded-xl lg:rounded-2xl xl:rounded-3xl text-white"
@@ -47,7 +38,6 @@ function Home() {
             transition={{
               duration: 2,
             }}
-            variants={containerVars}
             exit="initial"
           >
             {leftData.map((item) => {
@@ -91,7 +81,7 @@ function Home() {
             })}
           </motion.div>
         </AnimatePresence>
-      </motion.div>
+      </div>
       <div className=" prepareBox w-full flex items-center justify-center p-0 m-0">
         <motion.div initial={{ y: "-50vh" }} animate={{ y: 0 }}>
           <Lottie
