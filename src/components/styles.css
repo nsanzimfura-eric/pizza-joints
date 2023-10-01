@@ -1,3 +1,10 @@
+.headerBox {
+  width: calc(100vw - 100px);
+}
+.logo {
+  max-width: 50px;
+  max-height: 50px;
+}
 .nameTitle {
   -webkit-text-stroke: 2px yellow;
   text-stroke: 2px yellow;
@@ -7,13 +14,21 @@
 .phoneRef {
   max-width: 400px;
 }
+.showUpBoxes {
+  position: relative;
+  z-index: 20;
+}
 .prepareBox {
   position: relative;
+  margin-top: -50px;
+}
+.animate-single-box {
+  width: 300px;
 }
 
 .btnPrepare {
   position: absolute;
-  left: 30%;
+  left: 45%;
   right: -50%;
   transform: translateX(-50%, -50%);
   z-index: 20;
@@ -22,6 +37,14 @@
 }
 
 /* media queries */
+@media screen and (max-width: 768px) {
+  .headerBox {
+    width: calc(100vw - 40px);
+  }
+  .animate-single-box {
+    width: 260px;
+  }
+}
 
 @media screen and (max-width: 500px) {
   .phoneRef {

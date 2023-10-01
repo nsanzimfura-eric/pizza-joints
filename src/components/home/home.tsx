@@ -19,18 +19,20 @@ function Home() {
       </h1>
       {!isPhoneAnimating && (
         <motion.p
-          initial={{ x: "-100vw" }}
+          initial={{ x: "100vw" }}
           animate={{ x: 0 }}
           className="italic text-white mb-5"
+          transition={{ duration: 2 }}
         >
           At your service, we deliver
         </motion.p>
       )}
-      <div className=" w-full flex md:gap-20 lg:flex-row my-5">
+      <div className="showUpBoxes w-full flex items-center justify-center md:gap-20 lg:flex-row my-5">
         <motion.div
-          className="w-full flex flex-col justify-start items-start md:w-1/2 p-3 border-yellow-400 border bg-transparent rounded-lg md:rounded-xl lg:rounded-2xl xl:rounded-3xl text-white"
-          initial={{ x: "100vw" }}
+          className="flex flex-col animate-single-box justify-start items-start p-5 border-yellow-400 border bg-transparent rounded-lg md:rounded-xl lg:rounded-2xl xl:rounded-3xl text-white"
+          initial={{ x: "-100vw" }}
           animate={{ x: 0 }}
+          transition={{ duration: 2 }}
         >
           {leftData.map((item) => {
             return (
@@ -41,9 +43,10 @@ function Home() {
           })}
         </motion.div>
         <motion.div
-          className="w-full display-none-one-426 md:w-1/2 p-3 flex flex-col justify-start items-start border-yellow-400 border bg-transparent rounded-lg md:rounded-xl lg:rounded-2xl xl:rounded-3xl text-white"
-          initial={{ x: "-100vw" }}
+          className="display-none-one-426 animate-single-box p-5 flex flex-col justify-start items-start border-yellow-400 border bg-transparent rounded-lg md:rounded-xl lg:rounded-2xl xl:rounded-3xl text-white"
+          initial={{ x: "100vw" }}
           animate={{ x: 0 }}
+          transition={{ duration: 2 }}
         >
           {rightData.map((item) => {
             return (
@@ -75,8 +78,9 @@ function Home() {
         {!isPhoneAnimating && (
           <motion.button
             className="btnPrepare bg-transparent mt-2 hover:text-white hover:bg-yellow-400 text-yellow-400 border-yellow-400 border rounded px-4 py-2 transition-colors duration-300 ease-in-out"
-            initial={{ y: "-100vh" }}
+            initial={{ y: "100vh" }}
             animate={{ y: 0 }}
+            transition={{ duration: 2 }}
           >
             Prepare your Order
           </motion.button>
