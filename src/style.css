@@ -64,7 +64,7 @@ body {
 }
 
 /* media queries */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 780px) {
   #app {
     padding: 20px;
   }

@@ -16,7 +16,7 @@ function Home() {
   const [isPhoneAnimating, setIsPhoneAnimating] = useState(true);
 
   return (
-    <div className="flex flex-col justify-start pt-10 items-center h-screen">
+    <div className="flex flex-col justify-start pt-5 items-center h-screen">
       <h1 className="text-4xl my-5">
         Welcome to
         <motion.span className="text-yellow-400 text-5xl font-bold mx-3 nameTitle">
@@ -35,14 +35,18 @@ function Home() {
       )}
       <motion.div
         variants={menuVars}
-        className="showUpBoxes w-full flex items-center justify-center md:gap-20 lg:flex-row my-5"
+        className="showUpBoxes w-full flex items-center justify-center md:gap-20 lg:flex-row mt-5"
       >
         <AnimatePresence>
           <motion.div
-            className="flex flex-col animate-single-box gap-3 justify-start items-start p-5 border-yellow-400 border bg-transparent rounded-lg md:rounded-xl lg:rounded-2xl xl:rounded-3xl text-white"
-            // initial={{ x: "-100vw" }}
-            animate={{ x: 0 }}
-            transition={{ duration: 2 }}
+            className="flex flex-col animate-single-box gap-3 justify-start items-start p-5  border-yellow-400 border bg-transparent rounded-lg md:rounded-xl lg:rounded-2xl xl:rounded-3xl text-white"
+            initial={{ x: "-100vw" }}
+            animate={{
+              x: 0,
+            }}
+            transition={{
+              duration: 2,
+            }}
             variants={containerVars}
             exit="initial"
           >
@@ -51,9 +55,8 @@ function Home() {
                 <div key={item}>
                   <motion.p
                     className="text-sm overflow-hidden uppercase"
-                    initial={{ color: "#8a2ce2", opacity: 0.3, y: "-50px" }}
-                    animate={{ color: "white", opacity: 1, y: 0 }}
-                    variants={titleAnim}
+                    initial={{ opacity: 0.3, y: "-50px" }}
+                    animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 3 }}
                   >
                     {item}
@@ -66,20 +69,20 @@ function Home() {
         <AnimatePresence>
           <motion.div
             className="display-none-one-426 gap-3 animate-single-box p-5 flex flex-col justify-start items-start border-yellow-400 border bg-transparent rounded-lg md:rounded-xl lg:rounded-2xl xl:rounded-3xl text-white"
-            // initial={{ x: "100vw" }}
+            initial={{ x: "100vw" }}
             animate={{ x: 0 }}
-            transition={{ duration: 2 }}
+            transition={{
+              duration: 2,
+            }}
             exit="initial"
-            variants={containerVars}
           >
             {rightData.map((item) => {
               return (
                 <motion.p
-                  initial={{ color: "#8a2ce2", opacity: 0.3 }}
-                  animate={{ color: "white", opacity: 1 }}
+                  initial={{ opacity: 0.3, y: "-50px" }}
+                  animate={{ opacity: 1, y: 0 }}
                   key={item}
                   className="text-sm overflow-hidden uppercase"
-                  variants={titleAnim}
                   transition={{ duration: 3 }}
                 >
                   {item}
