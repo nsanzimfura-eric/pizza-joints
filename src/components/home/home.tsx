@@ -40,6 +40,9 @@ function Home() {
             }}
             transition={{
               duration: 2,
+              type: "spring",
+              stiffness: 20,
+              delay: 1.5,
             }}
             exit="initial"
           >
@@ -66,6 +69,9 @@ function Home() {
             animate={{ x: 0 }}
             transition={{
               duration: 2,
+              type: "spring",
+              stiffness: 20,
+              delay: 1.5,
             }}
             exit="initial"
           >
