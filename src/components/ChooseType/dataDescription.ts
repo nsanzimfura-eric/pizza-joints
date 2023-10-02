@@ -52,3 +52,56 @@ export const titleAnim = {
     },
   },
 };
+
+// videos
+
+export const videoJsOptions = [
+  {
+    autoplay: false,
+    controls: true,
+    responsive: true,
+    fluid: true,
+    sources: [
+      {
+        src: "/xx.mp4",
+        type: "video/mp4",
+      },
+    ],
+  },
+  {
+    autoplay: false,
+    controls: true,
+    responsive: true,
+    fluid: true,
+    sources: [
+      {
+        src: "/pizzaJoints2.mp4",
+        type: "video/mp4",
+      },
+    ],
+  },
+  {
+    autoplay: false,
+    controls: true,
+    responsive: true,
+    fluid: true,
+    sources: [
+      {
+        src: "/pizzaJoints3.mp4",
+        type: "video/mp4",
+      },
+    ],
+  },
+  {
+    autoplay: false,
+    controls: true,
+    responsive: true,
+    fluid: true,
+    sources: [
+      {
+        src: "/pizzaJoints4.mp4",
+        type: "video/mp4",
+      },
+    ],
+  },
+];

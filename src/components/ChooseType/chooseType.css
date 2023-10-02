@@ -1,3 +1,31 @@
 .chooseType {
   width: 100%;
+  height: fit-content;
+  overflow: hidden;
+  min-height: 100vh;
+}
+.video_parent {
+  width: 100%;
+  background-color: transparent;
+  height: fit-content;
+}
+.video_child {
+  width: calc(100% / 2 - 40px);
+  aspect-ratio: 19/9;
+  height: auto;
+  border-radius: 20px;
+}
+
+/* Media queries */
+@media screen and (max-width: 600px) {
+  .video_parent {
+    width: 100%;
+    flex-direction: column !important;
+  }
+  .video_child {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 375px) {
 }

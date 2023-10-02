@@ -1,5 +1,11 @@
 .headerBox {
   width: calc(100vw - 100px);
+  background-color: #8a2ce2;
+  position: fixed;
+  top: 0;
+  left: 50px;
+  z-index: 100;
+  right: 50px;
 }
 .tsapp {
   max-width: 50px;
@@ -73,6 +79,8 @@
 @media screen and (max-width: 768px) {
   .headerBox {
     width: calc(100vw - 40px);
+    left: 20px;
+    right: 20px;
   }
   .animate-single-box {
     width: 260px;

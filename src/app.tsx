@@ -6,6 +6,7 @@ import Lottie from "lottie-react";
 import loadingSpinner from "./assets/lotties/loadingSpinner.json";
 import ChooseType from "./components/ChooseType/ChooseType";
 import { routes } from "./components/utils/routes";
+import "./style.css";
 
 function App() {
   const [isPageLoading, setIsPageLoading] = useState(true);
@@ -20,13 +21,15 @@ function App() {
     <Lottie animationData={loadingSpinner} />
   ) : (
     <Router>
-      <div className="w-full h-screen flex flex-col gap-2 justify-start items-center p-0 m-0">
+      <div className="w-full pageJoints_app h-screen flex flex-col gap-2 justify-start items-center p-0 m-0">
         <Header />
-        <Routes>
-          <Route path={routes.home} element={<Home />} />
-          <Route path={routes.chooseType} element={<ChooseType />} />
-          <Route path={routes.addIngredients} element={<Home />} />
-        </Routes>
+        <div className="w-full pizzaJoints_container">
+          <Routes>
+            <Route path={routes.home} element={<Home />} />
+            <Route path={routes.chooseType} element={<ChooseType />} />
+            <Route path={routes.addIngredients} element={<Home />} />
+          </Routes>
+        </div>
       </div>
     </Router>
   );
